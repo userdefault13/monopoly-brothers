@@ -1,4 +1,5 @@
 import propertyCards from './properties.js';
+import { PropertyTile } from './tiles/PropertyTile.js';
 //import { Card, chanceCards, communityChestCards } from './card.js';
 
 // Create the game board
@@ -17,7 +18,6 @@ function createBoard(graphics) {
   var startY = 50;
   var numProperties = 9;
   var rowHeight = propertyTileHeight;
-  var rowWidth = cornerTileSize + (numProperties * propertyTileWidth) + cornerTileSize;
 
   // Draw the corner tile
   graphics.lineStyle(2, 0x000000);
@@ -35,7 +35,7 @@ function createBoard(graphics) {
     graphics.fillRect(x, y, propertyTileWidth, propertyTileHeight);
     graphics.strokeRect(x, y, propertyTileWidth, propertyTileHeight);
     
-    displayPropertyNames(graphics, propertyCards, startX, startY, cornerTileSize, propertyTileWidth, propertyTileHeight);
+    displayPropertyNames(graphics, startX, startY, cornerTileSize, propertyTileWidth, propertyTileHeight);
   }
 
   // Draw the corner tile
@@ -56,15 +56,9 @@ function createBoard(graphics) {
     graphics.fillRect(startX, startY, propertyTileHeight, propertyTileWidth);
     graphics.strokeRect(startX, startY, propertyTileHeight, propertyTileWidth);
 
-    
-
     // Draw the blank spaces
     for (var i = 0; i < numProperties; i++) {
       startX += propertyTileWidth;
-      graphics.lineStyle(0, 0x000000);
-      graphics.fillStyle(0x000000);
-      graphics.fillRect(startX + 30*2, startY, propertyTileWidth, propertyTileWidth);
-      graphics.strokeRect(startX, startY, propertyTileHeight);
     }
     
     // Draw the property tile
@@ -113,7 +107,7 @@ function createBoard(graphics) {
 }
 
 // Display property names on tiles
-function displayPropertyNames(graphics, propertyCards, startX, startY, cornerTileSize, propertyTileWidth, propertyTileHeight) {
+function displayPropertyNames(graphics, startX, startY, cornerTileSize, propertyTileWidth, propertyTileHeight) {
   graphics.lineStyle(2, 0x000000);
 
   for (var i = 0; i < 9; i++) {
@@ -137,3 +131,17 @@ function displayPropertyNames(graphics, propertyCards, startX, startY, cornerTil
 }
 
 export default createBoard;
+
+
+
+
+
+
+// const tiles = [CornerTile, PropertyTile, PropertyTile, PropertyTile, PropertyTile, CornerTile]
+
+// let currentX = 50;
+// let currentY = 50;
+// tiles.forEach((tile, index)=> {
+//   tile.render(currentX, )
+//   currentX = tile.width
+// })
