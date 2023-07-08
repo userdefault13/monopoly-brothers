@@ -6,4 +6,4 @@ class BaseTile {
     }
 }
 
-export default BaseTile
+export default BaseTile;

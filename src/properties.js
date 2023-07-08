@@ -1,6 +1,6 @@
 // properties.js
 
-import { PropertyTile } from "./tiles/PropertyTile";
+import PropertyTile from "./tiles/PropertyTile";
 
     // Create property instances
     const mediterraneanAve = new PropertyTile('Mediterranean Avenue', 60, [2, 10, 30, 90, 160, 250], 50, 50);

@@ -1,4 +1,4 @@
-import { BaseTile } from "../properties";
+import BaseTile from "./BaseTile";
 
 class ChanceTile extends BaseTile {
 }
