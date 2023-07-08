@@ -30,7 +30,7 @@ export class Board extends Phaser.Scene {
         for (var i = 1; i <= numProperties; i++) {
             currentX += goCorner.width; // Move to the next tile position
             const propertyRectangle = this.add.rectangle();
-            const propertyTile = new PropertyTile(`Property ${i}`, 200, [20, 100, 300, 750, 925, 1100], 150, 150, i); // Replace the arguments with appropriate values
+            const propertyTile = new PropertyTile(`Property ${i}`, 200, [20, 100, 300, 750, 925, 1100], 150, 150, i);
             propertyTile.render(propertyRectangle, currentX, currentY);
             currentX += propertyTile.width; // Update the currentX position for the next tile
         }
