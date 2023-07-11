@@ -1,15 +1,21 @@
 import BaseTile from "./BaseTile";
 
-const CORNER_W_H = 240;
 
 class CornerTile extends BaseTile {
-    constructor(position) {
-        super(position, CORNER_W_H, CORNER_W_H);
+    constructor(index, setPositionX, setPositionY, name, action) {
+        super(index, width, height);
+            this.index = index;
+            this.setPositionX = setPositionX;
+            this.setPositionY = setPositionY;
+            this.width = cornerWidth;
+            this.height = cornerHeight;
+            this.name = name;
+            this.action = action;
     }
 
     render(graphics, x, y) {
-        graphics.displayWidth = this.width;
-        graphics.displayHeight = this.height;
+        graphics.displayWidth = cornerWidth;
+        graphics.displayHeight = cornerHeight;
         graphics.setPosition(x,y);
         graphics.setFillStyle(0x3498db);
         graphics.setInteractive();

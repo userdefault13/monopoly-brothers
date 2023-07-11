@@ -2,6 +2,7 @@ import Phaser from "phaser";
 import CornerTile from "./tiles/CornerTile";
 import PropertyTile from './tiles/PropertyTile.js';
 
+
 export class Board extends Phaser.Scene {
     constructor() {
         super('board');
