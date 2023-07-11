@@ -3,6 +3,36 @@ import PropertyTile from "./tiles/PropertyTile";
 import CornerTile from "./tiles/CornerTile";
 
 
+const propertyConfigs = [{
+    position: 0,
+    name: 'Mediterranean Avenue',
+    width: 180,
+    height: 240,
+    price: 60,
+    rent: [2, 10, 30, 90, 160, 250],
+    houseCost: 50,
+    hotelCost: 50
+},
+{
+    position: 1,
+    name: 'Baltic Avenue',
+    width: 180,
+    height: 240,
+    price: 60,
+    rent: [4, 20, 60, 180, 320, 450],
+    houseCost: 50,
+    hotelCost: 50
+}]
+
+const properties = propertyConfigs.map(propertyConfig => {
+    return new PropertyTile(propertyConfig)
+})
+
+
+
+
+
+
 // Create:
 // property tile cards
 const mediterraneanAve = new PropertyTile(290, 50, 180, 240, 'Mediterranean Avenue', 60, [2, 10, 30, 90, 160, 250], 50, 50);
@@ -12,13 +42,13 @@ const vermontAve = new PropertyTile(290, 50, 180, 240, 'Vermont Avenue', 100, [6
 const connecticutAve = new PropertyTile(290, 50, 180, 240, 'Connecticut Avenue', 120, [8, 40, 100, 300, 450, 600], 50, 50);
 const stCharlesPlace = new PropertyTile(290, 50, 240, 180, 'St. Charles Place', 140, [10, 50, 150, 450, 625, 750], 100, 100);
 const statesAve = new PropertyTile(290, 50, 240, 180, 'States Avenue', 140, [10, 50, 150, 450, 625, 750], 100, 100);
-const virginiaAve = new PropertyTile(290, 50, 240, 180 ,'Virginia Avenue', 160, [12, 60, 180, 500, 700, 900], 100, 100);
+const virginiaAve = new PropertyTile(290, 50, 240, 180 , 'Virginia Avenue', 160, [12, 60, 180, 500, 700, 900], 100, 100);
 const stJamesPlace = new PropertyTile(290, 50, 240, 180, 'St. James Place', 180, [14, 70, 200, 550, 750, 950], 100, 100);
 const tennesseeAve = new PropertyTile(290, 50, 240, 180, 'Tennessee Avenue', 180, [14, 70, 200, 550, 750, 950], 100, 100);
 const newYorkAve = new PropertyTile(290, 50, 240, 180, 'New York Avenue', 200, [16, 80, 220, 600, 800, 1000], 100, 100);
 const kentuckyAve = new PropertyTile(290, 50, 240, 180, 'Kentucky Avenue', 220, [18, 90, 250, 700, 875, 1050], 150, 150);
 const indianaAve = new PropertyTile(290, 50, 240, 180, 'Indiana Avenue', 220, [18, 90, 250, 700, 875, 1050], 150, 150);
-const illinoisAve = new PropertyTile(290, 50, 240, 180,'Illinois Avenue', 240, [20, 100, 300, 750, 925, 1100], 150, 150);
+const illinoisAve = new PropertyTile(290, 50, 240, 180, 'Illinois Avenue', 240, [20, 100, 300, 750, 925, 1100], 150, 150);
 const atlanticAve = new PropertyTile(290, 50, 240, 180, 'Atlantic Avenue', 260, [22, 110, 330, 800, 975, 1150], 150, 150);
 const ventnorAve = new PropertyTile(290, 50, 240, 180, 'Ventnor Avenue', 260, [22, 110, 330, 800, 975, 1150], 150, 150);
 const marvinGardens = new PropertyTile(290, 50, 240, 180, 'Marvin Gardens', 280, [24, 120, 360, 850, 1025, 1200], 150, 150);
