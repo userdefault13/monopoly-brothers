@@ -1,14 +1,16 @@
 import BaseTile from "./BaseTile";
+import properties from "../cards/properties";
+
 
 class PropertyTile extends BaseTile {
-    constructor(config) {
-        const { position, width, height, setPositionX, setPositionY, name, price, rent, houseCost, hotelCost} = config;
-        super(position, width, height);
+    constructor(indexr) {
+        const { index, name, width, height, /*setPositionX, setPositionY,*/ price, rent, houseCost, hotelCost} = properties[indexr];
+        super(index, width, height);
         this.name = name;
-        this.setPositionX = setPositionX;
-        this.setPositionY = setPositionY;
         this.width = propertyWidth;
         this.height = propertyHeight;
+       // this.setPositionX = setPositionX;
+       // this.setPositionY = setPositionY;
         this.price = price;
         this.rent = rent;
         this.hasHotel = false;
@@ -18,16 +20,61 @@ class PropertyTile extends BaseTile {
         // state
         this.owner = null;
         this.houses = 0;
+        
     }
 
-    buy(player) {
-        if(player.getBalance() >= this.price) {
-            this.owner = player;
+    calculateRent() {
+        let rentAmount = this.rent;
+    
+        // Modify rent amount based on property conditions
+        if (this.houses > 0) {
+            // Increase rent based on the number of houses
+            rentAmount *= Math.pow(2, this.houses);
+        }
+    
+        if (this.hasHotel) {
+            // Increase rent if a hotel is present
+            rentAmount *= 2;
+        }
+    
+        return rentAmount;
+    }
+
+    addHouse() {
+        if (this.houses < 4 && !this.hasHotel) {
+            this.houses++;
         }
     }
-
-    getRent() {
-        
+    
+    addHotel() {
+        if (this.houses === 4) {
+            this.houses = 0;
+            this.hasHotel = true;
+        }
+    }
+    
+    getHouseCount() {
+        return this.houses;
+    }
+    
+    hasHotel() {
+        return this.hasHotel;
+    }
+    
+    setOwner(player) {
+        this.owner = player;
+    }
+    
+    getOwner() {
+        return this.owner;
+    }
+    
+    getHouseCost() {
+        return this.houseCost;
+    }
+    
+    getHotelCost() {
+        return this.hotelCost;
     }
 
     render(graphics, x, y) {

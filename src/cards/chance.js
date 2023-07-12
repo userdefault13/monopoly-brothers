@@ -1,9 +1,9 @@
-import ChanceTile from "./tiles/ChanceTile";
+// chance cards
+import ChanceTile from "../tiles/ChanceTile";
 
 const randomIndex = Math.floor(Math.random() * chanceArray.length);
 const randomCard = chanceArray[randomIndex];
 
-// chance cards
 const chanceArray = [
     {
         title: 'Advance to Go',
