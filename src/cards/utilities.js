@@ -1,17 +1,17 @@
-import UtilityTile from "./tiles/UtilityTile";
+import UtilityTile from "../tiles/UtilityTile"
 
-const utilityConfig = [
+export const utilityConfig = [
 {
-    index: 0,
-    name: "Electric Compamy",
+    index: 12,
+    name: "Electric Company",
     width: 180,
     height: 240,
     price: 200,
     fare: [25, 50, 175, 100],
 },
 {
-    index: 1,
-    name: "Water Company",
+    index: 28,
+    name: "Water Works",
     width: 180,
     height: 240,
     price: 200,
@@ -23,4 +23,4 @@ const utilities = utilityConfig.map(utilityConfig => {
     return new UtilityTile(utilityConfig)
 })
 
-export default { utilities };
+export { utilities };

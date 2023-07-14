@@ -1,16 +1,11 @@
 import BaseTile from "./BaseTile";
-import properties from "../cards/properties";
+import { properties } from "../cards/properties";
 
-
-class PropertyTile extends BaseTile {
-    constructor(indexr) {
-        const { index, name, width, height, /*setPositionX, setPositionY,*/ price, rent, houseCost, hotelCost} = properties[indexr];
-        super(index, width, height);
+export default class PropertyTile extends BaseTile {
+    constructor(propertyConfig) {
+        const {index, name, price, rent, houseCost, hotelCost} = propertyConfig;
+        super(index);
         this.name = name;
-        this.width = propertyWidth;
-        this.height = propertyHeight;
-       // this.setPositionX = setPositionX;
-       // this.setPositionY = setPositionY;
         this.price = price;
         this.rent = rent;
         this.hasHotel = false;
@@ -90,7 +85,6 @@ class PropertyTile extends BaseTile {
     }
 }
 
-export default PropertyTile;
 
 
 

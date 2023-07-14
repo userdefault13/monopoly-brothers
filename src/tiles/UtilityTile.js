@@ -1,14 +1,11 @@
 import BaseTile from "./BaseTile";
+import utilities from "../cards/utilities";
 
 class UtilityTile extends BaseTile {
-    constructor(config) {
-        const { index, width, height, setPositionX, setPositionY, name, price, fee} = config;
-        super(index, width, height);
+    constructor(utilityConfig) {
+        const { index, name, price, fee} = utilityConfig;
+        super(index);
         this.name = name;
-        this.setPositionX = setPositionX;
-        this.setPositionY = setPositionY;
-        this.width = propertyWidth;
-        this.height = propertyHeight;
         this.price = price;
         this.fee = fee;
 

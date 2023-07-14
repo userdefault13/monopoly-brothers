@@ -1,15 +1,11 @@
 import BaseTile from "./BaseTile";
-import corners from "../cards/properties";
+import { corners } from "../cards/corners";
 
-class CornerTile extends BaseTile {
-    constructor(indexr) {
-        const {index,  width, height, setPositionX, setPositionY, name, action} = corners[indexr];
-        super(index, width, height);
+export default class CornerTile extends BaseTile {
+    constructor(cornerConfig) {
+        const { index, name, action} = cornerConfig;
+        super(index);
         this.index = index;
-        this.width = cornerWidth;
-        this.height = cornerHeight;
-        this.setPositionX = setPositionX;
-        this.setPositionY = setPositionY;
         this.name = name;
         this.action = action;
     }
@@ -26,4 +22,4 @@ class CornerTile extends BaseTile {
     }
 }
 
-export default CornerTile;
+

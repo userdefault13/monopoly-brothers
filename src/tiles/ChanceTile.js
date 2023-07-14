@@ -1,13 +1,11 @@
 import BaseTile from "./BaseTile"; 
+import chance from "../cards/chance";
 
-class ChanceTile extends BaseTile {
-    constructor(index, setPositionX, setPositionY, title, description, action) {
-        super(index, width, height);
+export default class ChanceTile extends BaseTile {
+    constructor(chanceCards) {
+        const {index, title, description, action} = chanceCards;
+        super(index);
             this.index = index;
-            this.setPositionX = setPositionX;
-            this.setPositionY = setPositionY;
-            this.width = cornerWidth;
-            this.height = cornerHeight;
             this.title = title;
             this.description = description;
             this.action = action;
@@ -25,4 +23,3 @@ class ChanceTile extends BaseTile {
     }
 }
 
-export default ChanceTile;

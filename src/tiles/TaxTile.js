@@ -1,29 +1,28 @@
 import BaseTile from "./BaseTile";
-import { railroads } from "../cards/railroads";
+import tax from "../cards/tax";
 
-export default class RailroadTile extends BaseTile {
-    constructor(railroadConfig) {
-        const { index, name, price, fare} = railroadConfig;
+class TaxTile extends BaseTile {
+    constructor(TaxConfig) {
+        const { index, name, fee} = TaxConfig;
         super(index);
         this.name = name;
-        this.price = price;
-        this.fare = fare;
+        this.fee = fee;
 
         // state
         this.owner = null;
         this.deeds = 0;
     }
 
-    calculateFare() {
-        let fareAmount = this.fare;
+    calculateFee() {
+        let feeAmount = this.fee;
     
         // Modify fare amount based on property conditions
         if (this.deeds > 0) {
             // Increase fare based on the number of houses
-            fareAmount *= Math.pow(2, this.deeds);
+            feeAmount *= Math.pow(2, this.deeds);
         }
     
-        return fareAmount;
+        return feeAmount;
     }
     
     setOwner(player) {
@@ -42,11 +41,12 @@ export default class RailroadTile extends BaseTile {
         graphics.setFillStyle(0xffffff);
         graphics.setInteractive();
         graphics.on("pointerdown", () => {
-            alert("Railroad Tile clicked!");
+            alert("Tax Tile clicked!");
         });
     }
 }
 
+export default TaxTile;
 
 
 

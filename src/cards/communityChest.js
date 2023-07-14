@@ -1,10 +1,7 @@
 // community chest cards
 import CommunityChestTile from "../tiles/BaseTile";
 
-const randomIndex = Math.floor(Math.random() * communityChestArray.length);
-const randomCard = communityChestArray[randomIndex];
-
-const communityChestArray = [
+export const communityChestConfig = [
     {
       title: 'Advance to Go',
       description: 'Advance to Go and collect $200.',
@@ -129,16 +126,40 @@ const communityChestArray = [
     // Add more community chest cards as needed
   ];
   
-  const communityChestCard1 = new CommunityChestTile(290, 50, 180, 240, `${communityChestArray[randomCard].title}`, `${communityChestArray[randomCard].description}`, communityChestArray[randomCard].action);
-  const communityChestCard2 = new CommunityChestTile(290, 50, 180, 240, `${communityChestArray[randomCard].title}`, `${communityChestArray[randomCard].description}`, communityChestArray[randomCard].action);
-  const communityChestCard3 = new CommunityChestTile(290, 50, 180, 240, `${communityChestArray[randomCard].title}`, `${communityChestArray[randomCard].description}`, communityChestArray[randomCard].action);
-  const communityChestCard4 = new CommunityChestTile(290, 50, 180, 240, `${communityChestArray[randomCard].title}`, `${communityChestArray[randomCard].description}`, communityChestArray[randomCard].action);
+  const randomIndex = Math.floor(Math.random() * communityChestConfig.length);
+  
+
+  const communityChestCard1 = {
+    index: 2,
+    tile: new CommunityChestTile(
+      communityChestConfig[randomIndex].title,
+      communityChestConfig[randomIndex].description,
+      communityChestConfig[randomIndex].action
+    )
+  };
+
+  const communityChestCard2 = {
+    index: 17,
+    tile: new CommunityChestTile(
+      communityChestConfig[randomIndex].title,
+      communityChestConfig[randomIndex].description,
+      communityChestConfig[randomIndex].action
+    )
+  };
+  
+  const communityChestCard3 = {
+    index: 33,
+    tile: new CommunityChestTile(
+      communityChestConfig[randomIndex].title,
+      communityChestConfig[randomIndex].description,
+      communityChestConfig[randomIndex].action
+    )
+  };
   
   const communityChestCards = [
       communityChestCard1,
       communityChestCard2,
       communityChestCard3,
-      communityChestCard4
   ]
   
-  export default communityChestCards;                                                                                                                                                                                                                                                             
+  export { communityChestCards };                                                                                                                                                                                                                                                             
