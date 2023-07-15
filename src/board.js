@@ -3,7 +3,7 @@ import { propertyConfig } from "./cards/properties";
 import { railroadConfig } from "./cards/railroads";
 import { utilityConfig } from "./cards/utilities";
 import { chanceConfig } from "./cards/chance";
-import { communityChestConfig } from "./cards/communityChest";
+import { communityChestCards } from "./cards/communityChest";
 import { taxConfig } from "./cards/tax";
 
 // Rotation angle values in degrees
@@ -14,7 +14,6 @@ const propertyArray = propertyConfig;
 const railroadArray = railroadConfig;
 const utilityArray = utilityConfig;
 const chanceArray = chanceConfig;
-const communityChestArray = communityChestConfig;
 const taxArray = taxConfig;
 
 const monopolyTiles = [
@@ -117,7 +116,7 @@ export function createBoard(scene) {
     console.log(tileIndex);
 
     const tileData = getTileData(tileIndex);
-
+    console.log(tileIndex, tileData)
     const titleBox = scene.add.text(0, -50, tileData.name, {
       fontFamily: 'Arial',
       fontSize: '16pt',
@@ -159,22 +158,22 @@ export function createBoard(scene) {
 
   return rowTile;
 }
+           
 
 function getTileData(tileIndex) {
   let tileData;
-
   if (tileIndex === 0 || tileIndex === 10 || tileIndex === 20 || tileIndex === 30) {
-    tileData = cornersArray[tileIndex];
+    tileData = cornersArray.find((tile) => tile.index === tileIndex);
   } else if (tileIndex === 4 || tileIndex === 38) {
-    tileData = taxArray[0];
+    tileData = taxArray.find((tile) => tile.index === tileIndex);
   } else if (tileIndex === 2 || tileIndex === 17 || tileIndex === 33) {
-    tileData = communityChestArray[0];
+    tileData = communityChestCards.find((tile) => tile.index === tileIndex);
   } else if (tileIndex === 7 || tileIndex === 22 || tileIndex === 36) {
-    tileData = chanceArray[0];
+    tileData = chanceArray.find((tile) => tile.index === tileIndex);
   } else if (tileIndex === 5 || tileIndex === 15 || tileIndex === 25 || tileIndex === 35) {
-    tileData = railroadArray[0];
+    tileData = railroadArray.find((tile) => tile.index === tileIndex);
   } else if (tileIndex === 12 || tileIndex === 28) {
-    tileData = utilityArray[0];
+    tileData = utilityArray.find((tile) => tile.index === tileIndex);
   } else {
     tileData = propertyArray.find((tile) => tile.index === tileIndex); // Find the tile with matching index
   }

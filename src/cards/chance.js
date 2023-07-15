@@ -166,6 +166,7 @@ const randomIndex = Math.floor(Math.random() * chanceConfig.length);
 
 const chanceCard1 = {
     index: 7,
+    name: "Chance",
     tile: new ChanceTile(
         chanceConfig[randomIndex].title,
         chanceConfig[randomIndex].description,
@@ -174,6 +175,7 @@ const chanceCard1 = {
 };
 const chanceCard2 = {
     index: 22,
+    name: "Chance",
     tile: new ChanceTile(
         chanceConfig[randomIndex].title,
         chanceConfig[randomIndex].description,
@@ -182,6 +184,7 @@ const chanceCard2 = {
 };
 const chanceCard3 = {
     index: 36,
+    name: "Chance",
     tile: new ChanceTile(
         chanceConfig[randomIndex].title,
         chanceConfig[randomIndex].description,

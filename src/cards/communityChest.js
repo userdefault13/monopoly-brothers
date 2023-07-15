@@ -1,7 +1,7 @@
 // community chest cards
 import CommunityChestTile from "../tiles/BaseTile";
 
-export const communityChestConfig = [
+export const communityChestArray = [
     {
       title: 'Advance to Go',
       description: 'Advance to Go and collect $200.',
@@ -126,33 +126,36 @@ export const communityChestConfig = [
     // Add more community chest cards as needed
   ];
   
-  const randomIndex = Math.floor(Math.random() * communityChestConfig.length);
+  const randomIndex = Math.floor(Math.random() * communityChestArray.length);
   
 
   const communityChestCard1 = {
     index: 2,
+    name: "Community Chest",
     tile: new CommunityChestTile(
-      communityChestConfig[randomIndex].title,
-      communityChestConfig[randomIndex].description,
-      communityChestConfig[randomIndex].action
+      communityChestArray[randomIndex].title,
+      communityChestArray[randomIndex].description,
+      communityChestArray[randomIndex].action
     )
   };
 
   const communityChestCard2 = {
     index: 17,
+    name: "Community Chest",
     tile: new CommunityChestTile(
-      communityChestConfig[randomIndex].title,
-      communityChestConfig[randomIndex].description,
-      communityChestConfig[randomIndex].action
+      communityChestArray[randomIndex].title,
+      communityChestArray[randomIndex].description,
+      communityChestArray[randomIndex].action
     )
   };
   
   const communityChestCard3 = {
     index: 33,
+    name: "Community Chest",
     tile: new CommunityChestTile(
-      communityChestConfig[randomIndex].title,
-      communityChestConfig[randomIndex].description,
-      communityChestConfig[randomIndex].action
+      communityChestArray[randomIndex].title,
+      communityChestArray[randomIndex].description,
+      communityChestArray[randomIndex].action
     )
   };
   
