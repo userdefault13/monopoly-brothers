@@ -3,6 +3,7 @@ import CornerTile from "../tiles/CornerTile";
 
 export const cornersConfig = [
     {
+        type:"corner",
         index: 0,
         width: 240,
         height: 240,
@@ -15,6 +16,7 @@ export const cornersConfig = [
         }
     },
     {
+        type:"corner",
         index: 10,
         width: 240,
         height: 240,
@@ -27,6 +29,7 @@ export const cornersConfig = [
         }
     },
     {
+        type:"corner",
         index: 20,
         width: 240,
         height: 240,
@@ -39,6 +42,7 @@ export const cornersConfig = [
         }
     },
     {
+        type:"corner",
         index: 30,
         width: 240,
         height: 240,

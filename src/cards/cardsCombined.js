@@ -1,21 +1,23 @@
-import { cornersConfig } from "./cards/corners";
-import { propertyConfig } from "./cards/properties";
-import { railroadConfig } from "./cards/railroads";
-import { utilityConfig } from "./cards/utilities";
-import { chanceConfig } from "./cards/chance";
-import { communityChestArray } from "./cards/communityChest";
-import { taxConfig } from "./cards/tax";
+import { cornersConfig } from "./corners";
+import { propertyConfig } from "./properties";
+import { railroadConfig } from "./railroads";
+import { utilityConfig } from "./utilities";
+import { chanceConfig } from "./chance";
+import { communityChestArray } from "./communityChest";
+import { taxConfig } from "./tax";
 
 
-function getTiles() {
+export default function getTiles() {
     const allTiles = [
         ...cornersConfig,
         ...propertyConfig,
         ...railroadConfig,
         ...utilityConfig, 
         ...chanceConfig, 
-        ...communityChestArray
+        ...communityChestArray,
+        ...taxConfig
     ].sort((a, b) => a.index - b.index);
 
     return allTiles;
 }
+

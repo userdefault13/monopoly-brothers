@@ -1,6 +1,9 @@
 import BaseTile from "./BaseTile";
 import { properties } from "../cards/properties";
 
+const rectangleTileWidth = 180;
+const rectangleTileHeight = 240;
+
 export default class PropertyTile extends BaseTile {
     constructor(propertyConfig) {
         const {index, name, price, rent, houseCost, hotelCost} = propertyConfig;
@@ -72,16 +75,38 @@ export default class PropertyTile extends BaseTile {
         return this.hotelCost;
     }
 
-    render(graphics, x, y) {
-        // Add rendering logic for property tiles
-        graphics.displayWidth = this.width;
-        graphics.displayHeight = this.height;
-        graphics.setPosition(x, y);
-        graphics.setFillStyle(0xffffff);
-        graphics.setInteractive();
-        graphics.on("pointerdown", () => {
-            alert("Property Tile clicked!");
+    render(scene, x, y) {
+        const rectangleTile = scene.add.container(x,y);
+        const rectangleTileBackground = scene.add.rectangle(x, y, rectangleTileWidth, rectangleTileHeight, 0x400040);
+        rectangleTile.add(rectangleTileBackground);
+    
+        const colorBox = scene.add.rectangle(0, -92.5, rectangleTileWidth - 10, 45, 0xFF0000);
+        rectangleTile.add(colorBox);
+        
+        const titleBox = scene.add.text(0, -50, this.name, {
+          fontFamily: 'Arial',
+          fontSize: '16pt',
+          color: '#FFFFFF',
+          align: 'center',
+          fontStyle: 'bold'
         });
+    
+        titleBox.setOrigin(0.5);
+        rectangleTile.add(titleBox);
+    
+        const logoProp2 = scene.add.image(0, 20, 'placeholderImage').setDisplaySize(rectangleTileWidth - 10, 100);
+        rectangleTile.add(logoProp2);
+    
+        const priceBox = scene.add.text(0, 95, this.price, {
+          fontFamily: 'Arial',
+          fontSize: '16pt',
+          color: '#FFFFFF',
+          align: 'center',
+          fontStyle: 'bold'
+        });
+        priceBox.setOrigin(0.5);
+        rectangleTile.add(priceBox);
+        return rectangleTile
     }
 }
 
