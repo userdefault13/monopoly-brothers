@@ -2,8 +2,8 @@ import BaseTile from "./BaseTile";
 import tax from "../cards/tax";
 
 class TaxTile extends BaseTile {
-    constructor(TaxConfig) {
-        const { index, name, fee} = TaxConfig;
+    constructor(taxConfig) {
+        const { index, name, fee} = taxConfig;
         super(index);
         this.name = name;
         this.fee = fee;
@@ -24,19 +24,16 @@ class TaxTile extends BaseTile {
     
         return feeAmount;
     }
-    
-    setOwner(player) {
-        this.owner = player;
-    }
-    
-    getOwner() {
-        return this.owner;
-    }
 
     render(graphics, x, y) {
         // Add rendering logic for property tiles
         graphics.displayWidth = this.width;
         graphics.displayHeight = this.height;
+
+         // Add black border
+         graphics.lineStyle(2, 0x000000);
+         graphics.strokeRect(0, 0, this.width, this.height);
+ 
         graphics.setPosition(x, y);
         graphics.setFillStyle(0xffffff);
         graphics.setInteractive();

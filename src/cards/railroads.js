@@ -15,6 +15,7 @@ export const railroadConfig = [
 },
 {
     index: 25,
+    name: "B & O Railroad",
     price: 200,
     fare: [25, 50, 175, 100],
 },

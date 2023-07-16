@@ -1,7 +1,7 @@
 import BaseTile from "./BaseTile";
 import communityChestCards from "../cards/communityChest";
 
-class CommiunityChestTile extends BaseTile {
+export default class CommiunityChestTile extends BaseTile {
     constructor(communityChestConfig) {
     const {index, title, description, action} = communityChestConfig
         super(index);
@@ -22,5 +22,3 @@ class CommiunityChestTile extends BaseTile {
         })
     }
 }
-
-export default CommiunityChestTile;

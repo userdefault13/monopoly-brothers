@@ -1,13 +1,13 @@
-import BaseTile from "./BaseTile";
-import { corners } from "../cards/corners";
+import BaseTile from "../BaseTile";
+import { jailConfig } from "../../cards/corners/jail";
 
 const squareTileWidth = 240;
 const squareTileHeight = 240;
 
-export default class CornerTile extends BaseTile {
-    constructor(cornerConfig) {
+export default class JailTile extends BaseTile {
+    constructor(jailConfig) {
         super(squareTileWidth, squareTileHeight);
-        const { index, name, action} = cornerConfig;
+        const { index, name, action} = jailConfig;
         this.index = index;
         this.name = name;
         this.action = action;
@@ -27,11 +27,11 @@ export default class CornerTile extends BaseTile {
         const logoProp = scene.add.image(0, 0, 'placeholderImage').setDisplaySize(150, 100);
 
         const squareText = scene.add.text(0, 0, this.name, {
-          fontFamily: 'Arial',
-          fontSize: '16pt',
-          color: '#FFFFFF',
-          align: 'center',
-          fontStyle: 'bold'
+            fontFamily: 'Arial',
+            fontSize: '16pt',
+            color: '#FFFFFF',
+            align: 'center',
+            fontStyle: 'bold'
         });
 
         squareText.setOrigin(0.5);

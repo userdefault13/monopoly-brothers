@@ -1,4 +1,7 @@
-import { cornersConfig } from "./corners";
+import { goConfig } from "./corners/go";
+import { goToJailConfig } from "./corners/goToJail";
+import { freeParkingConfig } from "./corners/freeParking";
+import { jailConfig } from "./corners/jail";
 import { propertyConfig } from "./properties";
 import { railroadConfig } from "./railroads";
 import { utilityConfig } from "./utilities";
@@ -9,7 +12,10 @@ import { taxConfig } from "./tax";
 
 export default function getTiles() {
     const allTiles = [
-        ...cornersConfig,
+        ...goConfig,
+        ...goToJailConfig,
+        ...freeParkingConfig,
+        ...jailConfig,
         ...propertyConfig,
         ...railroadConfig,
         ...utilityConfig, 

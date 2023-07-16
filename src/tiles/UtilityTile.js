@@ -38,6 +38,10 @@ class UtilityTile extends BaseTile {
         // Add rendering logic for property tiles
         graphics.displayWidth = this.width;
         graphics.displayHeight = this.height;
+       
+         // Add black border
+        graphics.lineStyle(2, 0x000000);
+        graphics.strokeRect(0, 0, this.width, this.height);
         graphics.setPosition(x, y);
         graphics.setFillStyle(0xffffff);
         graphics.setInteractive();

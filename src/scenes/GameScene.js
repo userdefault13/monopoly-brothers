@@ -1,9 +1,15 @@
 import Phaser from 'phaser';
 
 import getTiles from '../cards/cardsCombined';
-import CornerTile from '../tiles/CornerTile';
+import GoTile from '../tiles/corners/GoTile';
+import GoToJailTile from '../tiles/corners/GoToJailTile';
+import FreeParkingTile from '../tiles/corners/FreeParkingTile';
+import JailTile from '../tiles/corners/JailTile';
 import PropertyTile from '../tiles/PropertyTile';
-
+import ChanceTile from '../tiles/ChanceTile';
+import CommiunityChestTile from '../tiles/CommunityChestTile';
+import TaxTile from '../tiles/TaxTile';
+import RailroadTile from '../tiles/RailroadTile';
 
 export default class GameScene extends Phaser.Scene {
     constructor ()
@@ -90,8 +96,22 @@ export default class GameScene extends Phaser.Scene {
             const tiles = rowGroup.map(tileIndex => {
               const tileConfig = combinedTiles[tileIndex];
         
-              if(tileConfig.type === "corner") {
-                return new CornerTile(tileConfig)
+              if (tileConfig.type === "Go") {
+                return new GoTile(tileConfig);
+              } else if (tileConfig.type === "Jail") {
+                return new JailTile(tileConfig);
+              } else if (tileConfig.type === "Go to Jail") {
+                return new GoToJailTile(tileConfig);
+              } else if (tileConfig.type === "Free Parking") {
+                return new FreeParkingTile(tileConfig);
+              } else if (tileConfig.type === "Chance") {
+                return new ChanceTile(tileConfig);
+              } else if (tileConfig.type === "Community Chest") {
+                return new CommiunityChestTile(tileConfig);
+              } else if (tileConfig.type === "Tax") {
+                return new TaxTile(tileConfig);
+              } else if (tileConfig.type === "Railroad") {
+                return new RailroadTile(tileConfig);
               } else {
                 return new PropertyTile(tileConfig);
               }

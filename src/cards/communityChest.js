@@ -5,6 +5,7 @@ export const communityChestArray = [
     {
       title: 'Advance to Go',
       description: 'Advance to Go and collect $200.',
+      type: "Community Chest",
       action: (player) => {
         player.moveToTile(goTile);
         player.collectMoney(200);
@@ -13,6 +14,7 @@ export const communityChestArray = [
     {
       title: 'Bank error in your favor',
       description: 'Bank error in your favor. Collect $75.',
+      type: "Community Chest",
       action: (player) => {
         player.collectMoney(75);
       }
@@ -20,6 +22,7 @@ export const communityChestArray = [
     {
       title: 'Doctor\'s fees',
       description: 'Doctor\'s fees. Pay $50.',
+      type: "Community Chest",
       action: (player) => {
         player.payMoney(50);
       }
@@ -27,6 +30,7 @@ export const communityChestArray = [
     {
       title: 'Get out of Jail free',
       description: 'Get out of Jail free. This card may be kept until needed or sold.',
+      type: "Community Chest",
       action: (player) => {
         player.receiveGetOutOfJailCard();
       }
@@ -34,6 +38,7 @@ export const communityChestArray = [
     {
       title: 'Go to Jail',
       description: 'Go directly to Jail. Do not pass Go, do not collect $200.',
+      type: "Community Chest",
       action: (player) => {
         player.moveToTile(jailTile);
         player.goToJail();
@@ -53,6 +58,7 @@ export const communityChestArray = [
     {
       title: 'Income Tax refund',
       description: 'Income Tax refund. Collect $20.',
+      type: "Community Chest",
       action: (player) => {
         player.collectMoney(20);
       }
@@ -71,6 +77,7 @@ export const communityChestArray = [
     {
       title: 'Life insurance matures',
       description: 'Life insurance matures. Collect $100.',
+      type: "Community Chest",
       action: (player) => {
         player.collectMoney(100);
       }
@@ -78,6 +85,7 @@ export const communityChestArray = [
     {
       title: 'Pay hospital fees',
       description: 'Pay hospital fees. Pay $100.',
+      type: "Community Chest",
       action: (player) => {
         player.payMoney(100);
       }
@@ -85,6 +93,7 @@ export const communityChestArray = [
     {
       title: 'Pay school fees',
       description: 'Pay school fees. Pay $50.',
+      type: "Community Chest",
       action: (player) => {
         player.payMoney(50);
       }
@@ -92,6 +101,7 @@ export const communityChestArray = [
     {
       title: 'Receive consultancy fee',
       description: 'Receive consultancy fee. Collect $25.',
+      type: "Community Chest",
       action: (player) => {
         player.collectMoney(25);
       }
@@ -99,6 +109,7 @@ export const communityChestArray = [
     {
       title: 'Street repairs',
       description: 'Street repairs. For each house pay $40. For each hotel pay $115.',
+      type: "Community Chest",
       action: (player) => {
         const totalHouses = player.getTotalHouses();
         const totalHotels = player.getTotalHotels();
@@ -112,6 +123,7 @@ export const communityChestArray = [
     {
       title: 'You have won second prize in a beauty contest',
       description: 'You have won second prize in a beauty contest. Collect $10.',
+      type: "Community Chest",
       action: (player) => {
         player.collectMoney(10);
       }
@@ -119,6 +131,7 @@ export const communityChestArray = [
     {
       title: 'You inherit $100',
       description: 'You inherit $100.',
+      type: "Community Chest",
       action: (player) => {
         player.collectMoney(100);
       }

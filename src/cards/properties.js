@@ -9,6 +9,7 @@ export const propertyConfig = [
     rent: [2, 10, 30, 90, 160, 250],
     houseCost: 50,
     hotelCost: 50,
+    colorBox: "0x945537"
 },
 {
     index: 3,
@@ -17,6 +18,8 @@ export const propertyConfig = [
     rent: [4, 20, 60, 180, 320, 450],
     houseCost: 50,
     hotelCost: 50,
+    colorBox: "0x945537"
+    
 },
 {
     index: 6,
@@ -25,6 +28,7 @@ export const propertyConfig = [
     rent: [6, 30, 90, 270, 400, 550],
     houseCost: 50,
     hotelCost: 50,
+    colorBox: "0xace0fc"
 },
 {
     index: 8,
@@ -33,6 +37,7 @@ export const propertyConfig = [
     rent: [6, 30, 90, 270, 400, 550],
     houseCost: 50,
     hotelCost: 50,
+    colorBox: "0xace0fc"
 },
 {
     index: 9,
@@ -41,6 +46,7 @@ export const propertyConfig = [
     rent: [8, 40, 100, 300, 450, 600],
     houseCost: 50,
     hotelCost: 50,
+    colorBox: "0xace0fc"
 },
 {
     index: 11,
@@ -49,6 +55,7 @@ export const propertyConfig = [
     rent: [10, 50, 150, 450, 625, 750],
     houseCost: 100,
     hotelCost: 100,
+    colorBox: "0xd63d96"
 },
 {
     index: 13,
@@ -57,6 +64,7 @@ export const propertyConfig = [
     rent: [10, 50, 150, 450, 625, 750],
     houseCost: 100,
     hotelCost: 100,
+    colorBox: "0xd63d96"
 },
 {
     index: 14,
@@ -65,6 +73,7 @@ export const propertyConfig = [
     rent: [12, 60, 180, 500, 700, 900],
     houseCost: 100,
     hotelCost: 100,
+    colorBox: "0xd63d96"
 },
 {
     index: 16,
@@ -73,6 +82,7 @@ export const propertyConfig = [
     rent: [14, 70, 200, 550, 750, 950],
     houseCost: 100,
     hotelCost: 100,
+    colorBox: "0xf69421"
 },
 {
     index: 18,
@@ -81,6 +91,7 @@ export const propertyConfig = [
     rent: [14, 70, 200, 550, 750, 950],
     houseCost: 100,
     hotelCost: 100,
+    colorBox: "0xf69421"
 },
 {
     index: 19,
@@ -89,6 +100,7 @@ export const propertyConfig = [
     rent: [16, 80, 220, 600, 800, 1000],
     houseCost: 100,
     hotelCost: 100,
+    colorBox: "0xf69421"
 },
 {
     index: 21,
@@ -97,6 +109,7 @@ export const propertyConfig = [
     rent: [18, 90, 250, 700, 875, 1050],
     houseCost: 150,
     hotelCost: 150,
+    colorBox: "0xec1a25"
 },
 {
     index: 23,
@@ -105,6 +118,7 @@ export const propertyConfig = [
     rent: [18, 90, 250, 700, 875, 1050],
     houseCost: 150,
     hotelCost: 150,
+    colorBox: "0xec1a25"
 },
 {
     index: 24,
@@ -113,6 +127,7 @@ export const propertyConfig = [
     rent: [20, 100, 300, 750, 925, 1100],
     houseCost: 150,
     hotelCost: 150,
+    colorBox: "0xec1a25"
 },
 {
     index: 26,
@@ -121,6 +136,7 @@ export const propertyConfig = [
     rent: [22, 110, 330, 800, 975, 1150],
     houseCost: 150,
     hotelCost: 150,
+    colorBox: "0xfef104"
 },
 {
     index: 27,
@@ -129,6 +145,7 @@ export const propertyConfig = [
     rent: [22, 110, 330, 800, 975, 1150],
     houseCost: 150,
     hotelCost: 150,
+    colorBox: "0xfef104"
 },
 {
     index: 29,
@@ -137,6 +154,7 @@ export const propertyConfig = [
     rent: [24, 120, 360, 850, 1025, 1200],
     houseCost: 150,
     hotelCost: 150,
+    colorBox: "0xfef104"
 },
 {
     index: 31,
@@ -145,6 +163,7 @@ export const propertyConfig = [
     rent: [26, 130, 390, 900, 1100, 1275],
     houseCost: 200,
     hotelCost: 200,
+    colorBox: "0x1eb25b"
 },
 {
     index: 32,
@@ -153,6 +172,7 @@ export const propertyConfig = [
     rent: [26, 130, 390, 900, 1100, 1275],
     houseCost: 200,
     hotelCost: 200,
+    colorBox: "0x1eb25b"
 },
 {
     index: 34,
@@ -161,6 +181,7 @@ export const propertyConfig = [
     rent: [28, 150, 450, 1000, 1200, 1400],
     houseCost: 200,
     hotelCost: 200,
+    colorBox: "0x1eb25b"
 },
 {
     index: 37,
@@ -169,6 +190,7 @@ export const propertyConfig = [
     rent: [35, 175, 500, 1100, 1300, 1500],
     houseCost: 200,
     hotelCost: 200,
+    colorBox: "0x0173b7"
 },
 {
     index: 39,
@@ -177,6 +199,7 @@ export const propertyConfig = [
     rent: [50, 200, 600, 1400, 1700, 2000],
     houseCost: 200,
     hotelCost: 200,
+    colorBox: "0x0173b7"
 },
 ];
 
