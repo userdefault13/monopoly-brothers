@@ -6,11 +6,18 @@ const squareTileHeight = 240;
 
 export default class CornerTile extends BaseTile {
     constructor(cornerConfig) {
+        super(squareTileWidth, squareTileHeight);
         const { index, name, action} = cornerConfig;
-        super(index, squareTileWidth, squareTileHeight);
         this.index = index;
         this.name = name;
         this.action = action;
+    }
+    getWidth() {
+        return this.width;
+    }
+
+    getHeight() {
+        return this.height;
     }
 
     render(scene, x, y) {

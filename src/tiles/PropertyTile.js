@@ -6,8 +6,9 @@ const rectangleTileHeight = 240;
 
 export default class PropertyTile extends BaseTile {
     constructor(propertyConfig) {
+        super(rectangleTileWidth, rectangleTileHeight);
+
         const {index, name, price, rent, houseCost, hotelCost} = propertyConfig;
-        super(index);
         this.name = name;
         this.price = price;
         this.rent = rent;
@@ -19,6 +20,13 @@ export default class PropertyTile extends BaseTile {
         this.owner = null;
         this.houses = 0;
         
+    }
+
+    getWidth(){
+        return this.width;
+    }
+    getHeight(){
+        return this.height;
     }
 
     calculateRent() {
@@ -97,15 +105,18 @@ export default class PropertyTile extends BaseTile {
         const logoProp2 = scene.add.image(0, 20, 'placeholderImage').setDisplaySize(rectangleTileWidth - 10, 100);
         rectangleTile.add(logoProp2);
     
-        const priceBox = scene.add.text(0, 95, this.price, {
-          fontFamily: 'Arial',
-          fontSize: '16pt',
-          color: '#FFFFFF',
-          align: 'center',
-          fontStyle: 'bold'
-        });
-        priceBox.setOrigin(0.5);
-        rectangleTile.add(priceBox);
+        if(this.price) {
+            const priceBox = scene.add.text(0, 95, this.price, {
+                fontFamily: 'Arial',
+                fontSize: '16pt',
+                color: '#FFFFFF',
+                align: 'center',
+                fontStyle: 'bold'
+            });
+            priceBox.setOrigin(0.5);
+            rectangleTile.add(priceBox);
+        }
+        
         return rectangleTile
     }
 }

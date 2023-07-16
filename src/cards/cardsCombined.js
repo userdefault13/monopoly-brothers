@@ -2,8 +2,8 @@ import { cornersConfig } from "./corners";
 import { propertyConfig } from "./properties";
 import { railroadConfig } from "./railroads";
 import { utilityConfig } from "./utilities";
-import { chanceConfig } from "./chance";
-import { communityChestArray } from "./communityChest";
+import { chanceCards } from "./chance";
+import { communityChestCards } from "./communityChest";
 import { taxConfig } from "./tax";
 
 
@@ -13,8 +13,8 @@ export default function getTiles() {
         ...propertyConfig,
         ...railroadConfig,
         ...utilityConfig, 
-        ...chanceConfig, 
-        ...communityChestArray,
+        ...chanceCards, 
+        ...communityChestCards,
         ...taxConfig
     ].sort((a, b) => a.index - b.index);
 
