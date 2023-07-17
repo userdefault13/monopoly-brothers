@@ -77,14 +77,14 @@ export default class GameScene extends Phaser.Scene {
         const rowHeight =  240;
 
         const containerPositions = {
-            container0X: this.scale.width/2,
-            container0Y: 120,
-            container1X: this.scale.width - 120,
-            container1Y: this.scale.height/2,
             container2X: this.scale.width/2,
-            container2Y: this.scale.height - 120,
-            container3X: 120,
+            container2Y: 120,
+            container3X: this.scale.width - 120,
             container3Y: this.scale.height/2,
+            container0X: this.scale.width/2,
+            container0Y: this.scale.height - 120,
+            container1X: 120,
+            container1Y: this.scale.height/2,
           }
         
           // get tiles data
@@ -141,6 +141,7 @@ export default class GameScene extends Phaser.Scene {
                 const leftPosition = (((rowWidth/2) * -1) + tile.getWidth()/2);
                 
                 renderedTile.setPosition(leftPosition + prevTotalWidth, 0)
+
                 row.add(renderedTile)
             } else {
                 throw Error('cannot render tile')

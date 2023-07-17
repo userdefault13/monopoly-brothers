@@ -22,7 +22,7 @@ export default class JailTile extends BaseTile {
 
     render(scene, x, y) {
         const squareTile = scene.add.container(x, y);
-        const squareTileBackground = scene.add.rectangle(0, 0, squareTileWidth, squareTileHeight, 0x800080);
+        const squareTileBackground = scene.add.rectangle(0, 0, squareTileWidth, squareTileHeight, 0xcae9e1);
         
         const logoProp = scene.add.image(0, 0, 'placeholderImage').setDisplaySize(150, 100);
 

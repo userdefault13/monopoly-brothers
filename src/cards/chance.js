@@ -180,7 +180,7 @@ const randomIndex = Math.floor(Math.random() * chanceConfig.length);
 
 
 const chanceCard1 = {
-    index: 7,
+    index: 23,
     name: "Chance",
     tile: new ChanceTile(
         chanceConfig[randomIndex].title,
@@ -189,7 +189,7 @@ const chanceCard1 = {
     ),
 };
 const chanceCard2 = {
-    index: 22,
+    index: 8,
     name: "Chance",
     tile: new ChanceTile(
         chanceConfig[randomIndex].title,
@@ -198,7 +198,7 @@ const chanceCard2 = {
     ),
 };
 const chanceCard3 = {
-    index: 36,
+    index: 14,
     name: "Chance",
     tile: new ChanceTile(
         chanceConfig[randomIndex].title,
