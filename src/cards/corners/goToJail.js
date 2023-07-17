@@ -4,7 +4,7 @@ import GoToJailTile from "../../tiles/corners/GoToJailTile";
 export const goToJailConfig = [
     {
         type:"Go to Jail",
-        index: 30,
+        index: 0,
         width: 240,
         height: 240,
         setPositionX: 0,

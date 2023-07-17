@@ -4,7 +4,7 @@ import JailTile from "../../tiles/corners/JailTile";
 export const jailConfig = [
     {
         type:"Jail",
-        index: 10,
+        index: 20,
         width: 240,
         height: 240,
         setPositionX: 0,

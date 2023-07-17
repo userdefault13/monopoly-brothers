@@ -91,6 +91,17 @@ export default class PropertyTile extends BaseTile {
         const rectangleTileWidth = 180;
         const rectangleTileHeight = 240;
         
+        // Create a graphics object within the container
+        const graphics = scene.add.graphics();
+
+        // Draw the rectangle shape with a border
+        graphics.lineStyle(4, 0x000000); // Set the border color and thickness
+
+        graphics.strokeRect(-90, -120, rectangleTileWidth, rectangleTileHeight); // Draw the border
+
+        // Add the graphics object to the container
+        rectangleTile.add(graphics);
+
     
         const colorBox = scene.add.rectangle(0, -92.5, rectangleTileWidth - 10, 45, this.colorBox);
         rectangleTile.add(colorBox);

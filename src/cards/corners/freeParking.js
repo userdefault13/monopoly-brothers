@@ -4,7 +4,7 @@ import FreeParkingTile from "../../tiles/corners/FreeParkingTile";
 export const freeParkingConfig = [
     {
         type:"Free Parking",
-        index: 20,
+        index: 30,
         width: 240,
         height: 240,
         setPositionX: 0,

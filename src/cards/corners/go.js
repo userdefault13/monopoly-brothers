@@ -4,7 +4,7 @@ import GoTile from "../../tiles/corners/GoTile";
 export const goConfig = [
     {
         type:"Go",
-        index: 0,
+        index: 10,
         width: 240,
         height: 240,
         setPositionX: 0,
