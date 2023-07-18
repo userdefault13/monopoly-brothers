@@ -2,12 +2,12 @@ import TaxTile from "../tiles/TaxTile"
 
 export const taxConfig = [
 {
-    index: 4,
+    index: 26,
     name: "Income Tax",
     fee: [25],
 },
 {
-    index: 38,
+    index: 12,
     name: "Luxury Tax",
     fee: [75],
 }

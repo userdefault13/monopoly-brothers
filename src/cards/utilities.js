@@ -2,7 +2,7 @@ import UtilityTile from "../tiles/UtilityTile"
 
 export const utilityConfig = [
 {
-    index: 12,
+    index: 38,
     name: "Electric Company",
     width: 180,
     height: 240,

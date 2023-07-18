@@ -2,24 +2,25 @@ import RailroadTile from "../tiles/RailroadTile";
 
 export const railroadConfig = [
 {
-    index: 5,
+    index: 25,
     name: "Reading Railroad",
     price: 200,
     fare: [25, 50, 175, 100],
 },
 {
-    index: 15,
+    index: 35,
     name: "Pennsylvania Railroad",
     price: 200,
     fare: [25, 50, 175, 100],
 },
 {
-    index: 25,
+    index: 5,
+    name: "B & O Railroad",
     price: 200,
     fare: [25, 50, 175, 100],
 },
 {
-    index: 35,
+    index: 15,
     name: "Short Line Railroad",
     price: 200,
     fare: [25, 50, 175, 100],

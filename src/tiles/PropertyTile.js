@@ -1,20 +1,20 @@
 import BaseTile from "./BaseTile";
-import { properties } from "../cards/properties";
+//import { property } from "../cards/properties";
 
 const rectangleTileWidth = 180;
 const rectangleTileHeight = 240;
 
 export default class PropertyTile extends BaseTile {
     constructor(propertyConfig) {
+        const { name, price, rent, houseCost, hotelCost, colorBox} = propertyConfig;
         super(rectangleTileWidth, rectangleTileHeight);
-
-        const {index, name, price, rent, houseCost, hotelCost} = propertyConfig;
         this.name = name;
         this.price = price;
         this.rent = rent;
         this.hasHotel = false;
         this.houseCost = houseCost;
         this.hotelCost = hotelCost;
+        this.colorBox = colorBox;
 
         // state
         this.owner = null;
@@ -82,21 +82,36 @@ export default class PropertyTile extends BaseTile {
     getHotelCost() {
         return this.hotelCost;
     }
+    getColorBox() {
+        return this.colorBox;
+    }
 
     render(scene, x, y) {
-        const rectangleTile = scene.add.container(x,y);
-        const rectangleTileBackground = scene.add.rectangle(x, y, rectangleTileWidth, rectangleTileHeight, 0x400040);
-        rectangleTile.add(rectangleTileBackground);
+        const rectangleTile = scene.add.container(x, y);
+        const rectangleTileWidth = 180;
+        const rectangleTileHeight = 240;
+        
+        // Create a graphics object within the container
+        const graphics = scene.add.graphics();
+
+        // Draw the rectangle shape with a border
+        graphics.lineStyle(4, 0x000000); // Set the border color and thickness
+
+        graphics.strokeRect(-90, -120, rectangleTileWidth, rectangleTileHeight); // Draw the border
+
+        // Add the graphics object to the container
+        rectangleTile.add(graphics);
+
     
-        const colorBox = scene.add.rectangle(0, -92.5, rectangleTileWidth - 10, 45, 0xFF0000);
+        const colorBox = scene.add.rectangle(0, -92.5, rectangleTileWidth - 10, 45, this.colorBox);
         rectangleTile.add(colorBox);
         
         const titleBox = scene.add.text(0, -50, this.name, {
-          fontFamily: 'Arial',
-          fontSize: '16pt',
-          color: '#FFFFFF',
-          align: 'center',
-          fontStyle: 'bold'
+            fontFamily: 'Arial',
+            fontSize: '12pt',
+            color: '#000000',
+            align: 'center',
+            fontStyle: 'bold'
         });
     
         titleBox.setOrigin(0.5);
@@ -109,7 +124,7 @@ export default class PropertyTile extends BaseTile {
             const priceBox = scene.add.text(0, 95, this.price, {
                 fontFamily: 'Arial',
                 fontSize: '16pt',
-                color: '#FFFFFF',
+                color: '#000000',
                 align: 'center',
                 fontStyle: 'bold'
             });

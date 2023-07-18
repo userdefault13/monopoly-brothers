@@ -1,9 +1,15 @@
 import Phaser from 'phaser';
 
 import getTiles from '../cards/cardsCombined';
-import CornerTile from '../tiles/CornerTile';
+import GoTile from '../tiles/corners/GoTile';
+import GoToJailTile from '../tiles/corners/GoToJailTile';
+import FreeParkingTile from '../tiles/corners/FreeParkingTile';
+import JailTile from '../tiles/corners/JailTile';
 import PropertyTile from '../tiles/PropertyTile';
-
+import ChanceTile from '../tiles/ChanceTile';
+import CommiunityChestTile from '../tiles/CommunityChestTile';
+import TaxTile from '../tiles/TaxTile';
+import RailroadTile from '../tiles/RailroadTile';
 
 export default class GameScene extends Phaser.Scene {
     constructor ()
@@ -71,14 +77,14 @@ export default class GameScene extends Phaser.Scene {
         const rowHeight =  240;
 
         const containerPositions = {
-            container0X: this.scale.width/2,
-            container0Y: 120,
-            container1X: this.scale.width - 120,
-            container1Y: this.scale.height/2,
             container2X: this.scale.width/2,
-            container2Y: this.scale.height - 120,
-            container3X: 120,
+            container2Y: 120,
+            container3X: this.scale.width - 120,
             container3Y: this.scale.height/2,
+            container0X: this.scale.width/2,
+            container0Y: this.scale.height - 120,
+            container1X: 120,
+            container1Y: this.scale.height/2,
           }
         
           // get tiles data
@@ -90,8 +96,22 @@ export default class GameScene extends Phaser.Scene {
             const tiles = rowGroup.map(tileIndex => {
               const tileConfig = combinedTiles[tileIndex];
         
-              if(tileConfig.type === "corner") {
-                return new CornerTile(tileConfig)
+              if (tileConfig.type === "Go") {
+                return new GoTile(tileConfig);
+              } else if (tileConfig.type === "Jail") {
+                return new JailTile(tileConfig);
+              } else if (tileConfig.type === "Go to Jail") {
+                return new GoToJailTile(tileConfig);
+              } else if (tileConfig.type === "Free Parking") {
+                return new FreeParkingTile(tileConfig);
+              } else if (tileConfig.type === "Chance") {
+                return new ChanceTile(tileConfig);
+              } else if (tileConfig.type === "Community Chest") {
+                return new CommiunityChestTile(tileConfig);
+              } else if (tileConfig.type === "Tax") {
+                return new TaxTile(tileConfig);
+              } else if (tileConfig.type === "Railroad") {
+                return new RailroadTile(tileConfig);
               } else {
                 return new PropertyTile(tileConfig);
               }
@@ -121,6 +141,7 @@ export default class GameScene extends Phaser.Scene {
                 const leftPosition = (((rowWidth/2) * -1) + tile.getWidth()/2);
                 
                 renderedTile.setPosition(leftPosition + prevTotalWidth, 0)
+
                 row.add(renderedTile)
             } else {
                 throw Error('cannot render tile')
