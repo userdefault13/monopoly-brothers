@@ -1,5 +1,5 @@
 import BaseTile from "./BaseTile";
-import communityChestCards from "../cards/communityChest";
+
 
 export default class CommiunityChestTile extends BaseTile {
     constructor(communityChestConfig) {

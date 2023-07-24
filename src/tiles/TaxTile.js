@@ -1,5 +1,5 @@
 import BaseTile from "./BaseTile";
-import tax from "../cards/tax";
+
 
 class TaxTile extends BaseTile {
     constructor(taxConfig) {

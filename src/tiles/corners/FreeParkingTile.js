@@ -1,5 +1,5 @@
 import BaseTile from "../BaseTile";
-import { freeParkingConfig } from "../../cards/corners/freeParking";
+
 
 const squareTileWidth = 240;
 const squareTileHeight = 240;

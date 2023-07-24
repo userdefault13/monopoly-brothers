@@ -1,5 +1,5 @@
 import BaseTile from "./BaseTile";
-import { railroads } from "../cards/railroads";
+
 
 export default class RailroadTile extends BaseTile {
     constructor(railroadConfig) {

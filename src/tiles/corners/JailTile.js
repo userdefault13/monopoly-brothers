@@ -1,5 +1,5 @@
 import BaseTile from "../BaseTile";
-import { jailConfig } from "../../cards/corners/jail";
+
 
 const squareTileWidth = 240;
 const squareTileHeight = 240;

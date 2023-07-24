@@ -1,5 +1,4 @@
 import BaseTile from "./BaseTile"; 
-import chance from "../cards/chance";
 
 export default class ChanceTile extends BaseTile {
     constructor(chanceCards) {
