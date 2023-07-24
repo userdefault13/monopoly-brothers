@@ -1,4 +1,5 @@
 import BaseTile from "./BaseTile";
+
 //import { property } from "../cards/properties";
 
 const rectangleTileWidth = 180;
@@ -87,6 +88,7 @@ export default class PropertyTile extends BaseTile {
     }
 
     render(scene, x, y) {
+        // Create container and set (x,y) positions
         const rectangleTile = scene.add.container(x, y);
         const rectangleTileWidth = 180;
         const rectangleTileHeight = 240;
@@ -97,28 +99,29 @@ export default class PropertyTile extends BaseTile {
         // Draw the rectangle shape with a border
         graphics.lineStyle(4, 0x000000); // Set the border color and thickness
 
-        graphics.strokeRect(-90, -120, rectangleTileWidth, rectangleTileHeight); // Draw the border
+        // Draw the border
+        graphics.strokeRect(-90, -120, rectangleTileWidth, rectangleTileHeight); 
 
         // Add the graphics object to the container
         rectangleTile.add(graphics);
 
-    
+        
         const colorBox = scene.add.rectangle(0, -92.5, rectangleTileWidth - 10, 45, this.colorBox);
         rectangleTile.add(colorBox);
         
-        const titleBox = scene.add.text(0, -50, this.name, {
+        const titleBoxY = ["Mediter\nranean\nAvenue", "North\nCarolina\nAvenue"].includes(this.name) ? -30 : -40;
+        const titleBox = scene.add.text(0, titleBoxY, this.name, {
             fontFamily: 'Arial',
-            fontSize: '12pt',
+            fontSize: '18pt',
             color: '#000000',
             align: 'center',
             fontStyle: 'bold'
         });
-    
         titleBox.setOrigin(0.5);
         rectangleTile.add(titleBox);
     
-        const logoProp2 = scene.add.image(0, 20, 'placeholderImage').setDisplaySize(rectangleTileWidth - 10, 100);
-        rectangleTile.add(logoProp2);
+        //const logoProp2 = scene.add.image(0, 20, 'placeholderImage').setDisplaySize(rectangleTileWidth - 10, 100);
+        //rectangleTile.add(logoProp2);
     
         if(this.price) {
             const priceBox = scene.add.text(0, 95, this.price, {

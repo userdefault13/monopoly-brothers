@@ -28,7 +28,7 @@ export const chanceConfig = [
         description: 'Advance to St. Charles Place.',
         type: "Chance",
         action: (player) => {
-            player.moveToTile(stCharlesPlaceTile);
+            player.moveToTile(39);
         }
     },
     {
@@ -37,7 +37,7 @@ export const chanceConfig = [
         description: 'Advance to the nearest Utility. If unowned, you may buy it from the Bank. If owned, throw dice and pay owner a total ten times the amount thrown.',
         type: "Chance",
         action: (player) => {
-            const nearestUtilityTile = find.NearestUtilityTile(player.getPosition());
+            /*const nearestUtilityTile = find.NearestUtilityTile(player.getPosition());
             player.moveToTile(nearestUtilityTile);
             
             if (nearestUtilityTile.isOwned()) {
@@ -45,7 +45,7 @@ export const chanceConfig = [
                 const rent = diceRoll * 10;
                 const owner = nearestUtilityTile.getOwner();
                 player.payRent(rent, owner);
-            }
+            }*/
         }
     },
     {
@@ -54,14 +54,14 @@ export const chanceConfig = [
         description: 'Advance to the nearest Railroad. If unowned, you may buy it from the Bank. If owned, pay owner twice the rental to which they are otherwise entitled.',
         type: "Chance",
         action: (player) => {
-            const nearestRailroadTile = findNearestRailroadTile(player.getPosition());
+            /*const nearestRailroadTile = nearestRailroadTileearestRailroadTile(player.getPosition());
             player.moveToTile(nearestRailroadTile);
             
             if (nearestRailroadTile.isOwned()) {
                 const rent = nearestRailroadTile.getRent() * 2;
                 const owner = nearestRailroadTile.getOwner();
                 player.payRent(rent, owner);
-            }
+            }*/
         }
     },
     {
@@ -97,7 +97,7 @@ export const chanceConfig = [
         description: 'Go directly to Jail. Do not pass Go, do not collect $200.',
         type: "Chance",
         action: (player) => {
-            player.moveToTile(jailTile);
+            player.moveToTile(0);
             player.goToJail();
         }
     },
@@ -130,7 +130,7 @@ export const chanceConfig = [
         description: 'Take a trip to Reading Railroad.',
         type: "Chance",
         action: (player) => {
-            player.moveToTile(readingRailroadTile);
+            player.moveToTile(25);
         }
     },
     {
@@ -139,7 +139,7 @@ export const chanceConfig = [
         description: 'Take a walk on the Boardwalk.',
         type: "Chance",
         action: (player) => {
-            player.moveToTile(boardwalkTile);
+            player.moveToTile(11);
         }
     },
     {

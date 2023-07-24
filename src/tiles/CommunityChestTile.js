@@ -12,8 +12,10 @@ export default class CommiunityChestTile extends BaseTile {
     }
 
     render(graphics, x, y) {
-        graphics.displayWidth = cornerWidth;
-        graphics.displayHeight = cornerHeight;
+        graphics.displayWidth = this.width;
+        graphics.displayHeight = this.height;
+
+        
         graphics.setPosition(x,y);
         graphics.setFillStyle(0x3498db);
         graphics.setInteractive();

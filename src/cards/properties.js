@@ -1,10 +1,9 @@
 // properties.js
-import PropertyTile from "../tiles/PropertyTile";
 
 export const propertyConfig = [
 {
     index: 29,
-    name: "Mediterranean Avenue",
+    name: "Mediter\nranean\nAvenue",
     price: 60,
     rent: [2, 10, 30, 90, 160, 250],
     houseCost: 50,
@@ -13,7 +12,7 @@ export const propertyConfig = [
 },
 {
     index: 27,
-    name: "Baltic Avenue",
+    name: "Baltic\nAvenue",
     price: 60,
     rent: [4, 20, 60, 180, 320, 450],
     houseCost: 50,
@@ -23,7 +22,7 @@ export const propertyConfig = [
 },
 {
     index: 24,
-    name: "Oriental Avenue",
+    name: "Oriental\nAvenue",
     price: 100,
     rent: [6, 30, 90, 270, 400, 550],
     houseCost: 50,
@@ -32,7 +31,7 @@ export const propertyConfig = [
 },
 {
     index: 22,
-    name: "Vermont Avenue",
+    name: "Vermont\nAvenue",
     price: 100,
     rent: [6, 30, 90, 270, 400, 550],
     houseCost: 50,
@@ -41,7 +40,7 @@ export const propertyConfig = [
 },
 {
     index: 21,
-    name: "Connecticut Avenue",
+    name: "Connecticut\nAvenue",
     price: 120,
     rent: [8, 40, 100, 300, 450, 600],
     houseCost: 50,
@@ -50,7 +49,7 @@ export const propertyConfig = [
 },
 {
     index: 39,
-    name: "St. Charles Place",
+    name: "St. Charles\nPlace",
     price: 140,
     rent: [10, 50, 150, 450, 625, 750],
     houseCost: 100,
@@ -59,7 +58,7 @@ export const propertyConfig = [
 },
 {
     index: 37,
-    name: "States Avenue",
+    name: "States\nAvenue",
     price: 140,
     rent: [10, 50, 150, 450, 625, 750],
     houseCost: 100,
@@ -68,7 +67,7 @@ export const propertyConfig = [
 },
 {
     index: 36,
-    name: "Virginia Avenue",
+    name: "Virginia\nAvenue",
     price: 160,
     rent: [12, 60, 180, 500, 700, 900],
     houseCost: 100,
@@ -77,7 +76,7 @@ export const propertyConfig = [
 },
 {
     index: 34,
-    name: "St. James Place",
+    name: "St. James\nPlace",
     price: 180,
     rent: [14, 70, 200, 550, 750, 950],
     houseCost: 100,
@@ -86,7 +85,7 @@ export const propertyConfig = [
 },
 {
     index: 32,
-    name: "Tennessee Avenue",
+    name: "Tennessee\nAvenue",
     price: 180,
     rent: [14, 70, 200, 550, 750, 950],
     houseCost: 100,
@@ -95,7 +94,7 @@ export const propertyConfig = [
 },
 {
     index: 31,
-    name: "New York Avenue",
+    name: "New York\nAvenue",
     price: 200,
     rent: [16, 80, 220, 600, 800, 1000],
     houseCost: 100,
@@ -104,7 +103,7 @@ export const propertyConfig = [
 },
 {
     index: 9,
-    name: "Kentucky Avenue",
+    name: "Kentucky\nAvenue",
     price: 220,
     rent: [18, 90, 250, 700, 875, 1050],
     houseCost: 150,
@@ -113,7 +112,7 @@ export const propertyConfig = [
 },
 {
     index: 7,
-    name: "Indiana Avenue",
+    name: "Indiana\nAvenue",
     price: 220,
     rent: [18, 90, 250, 700, 875, 1050],
     houseCost: 150,
@@ -122,7 +121,7 @@ export const propertyConfig = [
 },
 {
     index: 6,
-    name: "Illinois Avenue",
+    name: "Illinois\nAvenue",
     price: 240,
     rent: [20, 100, 300, 750, 925, 1100],
     houseCost: 150,
@@ -131,7 +130,7 @@ export const propertyConfig = [
 },
 {
     index: 4,
-    name: "Atlantic Avenue",
+    name: "Atlantic\nAvenue",
     price: 260,
     rent: [22, 110, 330, 800, 975, 1150],
     houseCost: 150,
@@ -140,7 +139,7 @@ export const propertyConfig = [
 },
 {
     index: 3,
-    name: "Ventnor Avenue",
+    name: "Ventnor\nAvenue",
     price: 260,
     rent: [22, 110, 330, 800, 975, 1150],
     houseCost: 150,
@@ -149,7 +148,7 @@ export const propertyConfig = [
 },
 {
     index: 1,
-    name: "Marvin Gardens",
+    name: "Marvin\nGardens",
     price: 280,
     rent: [24, 120, 360, 850, 1025, 1200],
     houseCost: 150,
@@ -158,7 +157,7 @@ export const propertyConfig = [
 },
 {
     index: 19,
-    name: "Pacific Avenue",
+    name: "Pacific\nAvenue",
     price: 300,
     rent: [26, 130, 390, 900, 1100, 1275],
     houseCost: 200,
@@ -167,7 +166,7 @@ export const propertyConfig = [
 },
 {
     index: 18,
-    name: "North Carolina Avenue",
+    name: "North\nCarolina\nAvenue",
     price: 300,
     rent: [26, 130, 390, 900, 1100, 1275],
     houseCost: 200,
@@ -176,7 +175,7 @@ export const propertyConfig = [
 },
 {
     index: 16,
-    name: "Pennsylvania Avenue",
+    name: "Pennsylvania\nAvenue",
     price: 320,
     rent: [28, 150, 450, 1000, 1200, 1400],
     houseCost: 200,
@@ -185,7 +184,7 @@ export const propertyConfig = [
 },
 {
     index: 13,
-    name: "Park Place",
+    name: "Park\nPlace",
     price: 350,
     rent: [35, 175, 500, 1100, 1300, 1500],
     houseCost: 200,
@@ -202,9 +201,3 @@ export const propertyConfig = [
     colorBox: "0x0173b7"
 },
 ];
-
-const properties = propertyConfig.map(propertyConfig => {
-    return new PropertyTile(propertyConfig)
-})
-
-export { properties };

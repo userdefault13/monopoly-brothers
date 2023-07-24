@@ -7,7 +7,7 @@ export const communityChestArray = [
       description: 'Advance to Go and collect $200.',
       type: "Community Chest",
       action: (player) => {
-        player.moveToTile(goTile);
+        player.moveToTile(10);
         player.collectMoney(200);
       }
     },
@@ -40,7 +40,7 @@ export const communityChestArray = [
       description: 'Go directly to Jail. Do not pass Go, do not collect $200.',
       type: "Community Chest",
       action: (player) => {
-        player.moveToTile(jailTile);
+        player.moveToTile(20);
         player.goToJail();
       }
     },
@@ -144,7 +144,7 @@ export const communityChestArray = [
 
   const communityChestCard1 = {
     index: 2,
-    name: "Community Chest",
+    name: "Community\nChest",
     tile: new CommunityChestTile(
       communityChestArray[randomIndex].title,
       communityChestArray[randomIndex].description,
@@ -153,8 +153,8 @@ export const communityChestArray = [
   };
 
   const communityChestCard2 = {
-    index: 17,
-    name: "Community Chest",
+    index: 18,
+    name: "Community\nChest",
     tile: new CommunityChestTile(
       communityChestArray[randomIndex].title,
       communityChestArray[randomIndex].description,
@@ -164,7 +164,7 @@ export const communityChestArray = [
   
   const communityChestCard3 = {
     index: 33,
-    name: "Community Chest",
+    name: "Community\nChest",
     tile: new CommunityChestTile(
       communityChestArray[randomIndex].title,
       communityChestArray[randomIndex].description,

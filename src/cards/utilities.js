@@ -3,7 +3,7 @@ import UtilityTile from "../tiles/UtilityTile"
 export const utilityConfig = [
 {
     index: 38,
-    name: "Electric Company",
+    name: "Electric\nCompany",
     width: 180,
     height: 240,
     price: 200,
@@ -11,7 +11,7 @@ export const utilityConfig = [
 },
 {
     index: 28,
-    name: "Water Works",
+    name: "Water\nWorks",
     width: 180,
     height: 240,
     price: 200,
