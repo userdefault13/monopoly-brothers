@@ -39,5 +39,15 @@
   }
 }
 
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#stage {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
 
 
