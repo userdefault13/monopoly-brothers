@@ -1,10 +1,6 @@
 // controllers/authController.js
 const User = require('../models/User');
 
-exports.signup = (req, res) => {
-  // Implementation for signup
-};
-
 exports.login = (req, res) => {
   // Implementation for login
 };

@@ -1,32 +1,23 @@
-//import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import './game';
+import LandingPage from '../src/components/landingPage';
+import LobbyPage from '../src/components/lobbyPage';
+
 
 function App() {
   return (
-    <div id="stage"></div>
-    /*<div className="App">
-      <header className="App-header">
-        <div>
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </div>
-        <div>
+    <Router>
+      <div>
+        <Routes>
+          {/* Route for the LandingPage */}
+          <Route path="/" element={<LandingPage />} />
 
-        </div>
-      </header>
-    </div>
-    */
+          {/* Route for the LobbyPage */}
+          <Route path="/lobby" element={<LobbyPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
