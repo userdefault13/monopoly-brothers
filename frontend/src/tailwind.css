@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Center the title */
+h1 {
+    text-align: center;
+  }
+  
+  /* Center the button */
+  .connect-button {
+    display: flex;
+    justify-content: center;
+  }
